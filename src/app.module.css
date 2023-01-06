@@ -1,0 +1,13 @@
+@import "./styles/variables.css";
+
+.main {
+  background-color: var(--primary-color);
+}
+
+.test {
+  color: var(--secondary-color);
+}
+
+.black {
+  color: orange;
+}

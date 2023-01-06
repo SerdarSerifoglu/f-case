@@ -1,0 +1,11 @@
+:root {
+  --primary-color: #fef8f8;
+  --secondary-color: #000000;
+  --card-background-color: #f0f0f0;
+}
+
+[data-theme="dark"] {
+  --primary-color: #000000;
+  --secondary-color: #fef8f8;
+  --card-background-color: #000000;
+}
