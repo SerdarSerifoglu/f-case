@@ -1,15 +1,15 @@
-import styles from "./Card.module.css";
+import styles from "./card.module.css";
 import { cardTypes } from "../utils/statics";
 import React from "react";
 
-const Card = (data) => {
-  const { mbid, type, name, image, listeners, playcount, author } = data;
+const Card = ({ data }) => {
+  const { mbid, type, name, imageUrl, listeners, playcount, author } = data;
 
   return (
     <React.Fragment key={mbid}>
       <div className={styles.card}>
         <div className={styles.card__image}>
-          <img src={image} alt="Girl in a jacket" />
+          <img src={imageUrl} alt={`${name} image`} />
         </div>
         <div className={styles.card__info}>
           {type === cardTypes.artist ? (
