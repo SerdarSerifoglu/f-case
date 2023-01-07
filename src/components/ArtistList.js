@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useQuery, useInfiniteQuery } from "react-query";
 
 import Card from "./Card";
 import styles from "./artistList.module.css";
