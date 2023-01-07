@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   if (type === cardTypes.artist) {
     return (
       <React.Fragment key={mbid}>
-        <div className={styles.card}>
+        <a className={styles.card} href={`artist-detail/${mbid}`}>
           <div className={styles.card__image}>
             <img src={imageUrl} alt={`${name} image`} />
           </div>
@@ -22,7 +22,7 @@ const Card = ({ data }) => {
             </div>
             <div className={styles.card__playcount}>playcount: {playcount}</div>
           </div>
-        </div>
+        </a>
       </React.Fragment>
     );
   }
