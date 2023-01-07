@@ -43,3 +43,12 @@ TrackCard.args = {
   playcount: 25385887,
   listeners: "955631",
 };
+
+export const TitleCard = Template.bind({});
+TitleCard.args = {
+  mbid: "1234",
+  name: "Taylor Swift",
+  type: cardTypes.title,
+  imageUrl:
+    "https://lastfm.freetls.fastly.net/i/u/174s/2a96cbd8b46e442fc41c2b86b821562f.png",
+};
