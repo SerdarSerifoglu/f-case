@@ -26,7 +26,6 @@ const Layout = ({ children }) => {
           </button>
         </header>
         <main>{children}</main>
-        <footer>Ömer Serdar ŞERİFOĞLU</footer>
       </div>
     </div>
   );
