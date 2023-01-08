@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App";
+import App from "./pages/HomePage/HomePage";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import ArtistDetail from "./ArtistDetail";
-import Layout from "./Layout";
+import ArtistDetail from "./pages/ArtistDetail/ArtistDetail";
+import Layout from "./components/Layout/Layout";
 import "./styles/global.css";
 
 const router = createBrowserRouter([
