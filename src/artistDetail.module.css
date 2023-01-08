@@ -1,0 +1,34 @@
+.artist-detail{
+    width: 100%;
+    display: flex;
+}
+
+.artist-detail__albums{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist-detail__tracks{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .artist-detail{
+        flex-direction: column;
+    }
+
+    .artist-detail__albums{
+        width: 100%;
+    }
+    
+    .artist-detail__tracks{
+        width: 100%;
+    }
+}

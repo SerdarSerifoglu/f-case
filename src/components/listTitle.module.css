@@ -1,0 +1,12 @@
+@import "../styles/variables.css";
+
+.list-title{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: flex-start;
+    
+    color: var(--secondary-color);
+    line-height: 2rem;
+    border-bottom:1px solid var(--secondary-color) ;
+}

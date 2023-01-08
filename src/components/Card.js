@@ -9,8 +9,12 @@ const Card = ({ data }) => {
     return (
       <React.Fragment key={mbid}>
         <a className={styles.card} href={`artist-detail/${mbid}`}>
-          <div className={styles.card__image}>
-            <img src={imageUrl} alt={`${name} image`} />
+          <div className={styles["card__image-wrapper"]}>
+            <img
+              className={styles["card__image-content"]}
+              src={imageUrl}
+              alt={`${name} image`}
+            />
           </div>
           <div className={styles.card__info}>
             <div className={styles.card__title}>Artist</div>
@@ -31,7 +35,7 @@ const Card = ({ data }) => {
     return (
       <React.Fragment key={mbid}>
         <div className={styles.card}>
-          <div className={styles.card__image}>
+          <div className={styles["card__image-wrapper"]}>
             <img src={imageUrl} alt={`${name} image`} />
           </div>
           <div className={styles.card__info}>
@@ -50,7 +54,7 @@ const Card = ({ data }) => {
     return (
       <React.Fragment key={mbid}>
         <div className={styles.card}>
-          <div className={styles.card__image}>
+          <div className={styles["card__image-wrapper"]}>
             <img src={imageUrl} alt={`${name} image`} />
           </div>
           <div className={styles.card__info}>
@@ -73,7 +77,7 @@ const Card = ({ data }) => {
     return (
       <React.Fragment key={mbid}>
         <div className={styles.card}>
-          <div className={styles.card__image}>
+          <div className={styles["card__image-wrapper"]}>
             <img src={imageUrl} alt={`${name} image`} />
           </div>
           <div className={styles.card__info}>

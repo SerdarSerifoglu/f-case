@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Card from "./Card";
 import styles from "./artistList.module.css";
+import ListTitle from "./ListTitle";
 
 const ITEMS_PER_PAGE = 30;
 
@@ -44,6 +45,7 @@ const ArtistList = () => {
   return (
     <React.Fragment>
       <div onScroll={handleScroll} className={styles["artist-list"]}>
+        <ListTitle title="Top Artist List" />
         {items.map((e, i) => (
           <Card
             key={i}

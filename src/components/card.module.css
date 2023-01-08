@@ -1,14 +1,15 @@
 @import "../styles/variables.css";
 
 .card{
-    width: 60%;
+    width: 100%;
+    max-width: 1440px;
     height: 15rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
 
     display: grid;
-    grid-template-columns: 15rem 2fr 1fr;
+    grid-template-columns: 2fr 3fr 2fr;
     grid-template-rows: auto;
     grid-template-areas: 
     "image info statistics";
@@ -18,10 +19,14 @@
     text-decoration: none;
 }
 
-.card__image{
+.card__image-wrapper{
     grid-area: image;
     display: flex;
     justify-content: center;
+}
+
+.card__image-content{
+    max-width: 10rem;
 }
 
 .card__info{
@@ -38,7 +43,80 @@
     font-size: 1.5rem;
     border-bottom: 1px solid var(--secondary-color);
 }
+
 .card__name{
     font-size: 1.8rem;
     font-weight: 600;
+}
+
+.card__listenerscount{
+    font-size: 1rem;
+}
+
+.card__playcount{
+    font-size: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+    .card__image-content{
+        max-width: 8rem;
+    }
+
+    .card__title{
+        max-width: 5rem;
+        font-size: 1rem;
+    } 
+
+    .card__name{
+        font-size: 1.2rem;
+    }
+
+    .card__listenerscount{
+        font-size: 0.8rem;
+    }
+    
+    .card__playcount{
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card__title{
+        max-width: 8rem;
+        font-size: 1.5rem;
+    }
+    
+    .card__name{
+        font-size: 1.8rem;
+    }
+    
+    .card__listenerscount{
+        font-size: 1rem;
+    }
+    
+    .card__playcount{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .card__image-content{
+        max-width: 5em;
+    }
+    .card__title{
+        max-width: 5rem;
+        font-size: 1rem;
+    } 
+
+    .card__name{
+        font-size: 1.2rem;
+    }
+
+    .card__listenerscount{
+        font-size: 0.8rem;
+    }
+    
+    .card__playcount{
+        font-size: 0.8rem;
+    }
 }
