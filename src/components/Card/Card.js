@@ -9,6 +9,7 @@ const Card = ({ data }) => {
     return (
       <React.Fragment key={mbid}>
         <a
+          data-testid="card"
           className={styles.card}
           href={
             mbid
