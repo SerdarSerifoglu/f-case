@@ -14,17 +14,29 @@ const Layout = ({ children }) => {
     <div>
       <div className={styles.main}>
         <header>
-          <div
-            className={styles["darkmode-icon"]}
-            onClick={() => {
-              var newThemeValue = theme == "light" ? "dark" : "light";
-              setTheme(newThemeValue);
+          <nav className={styles.navbar}>
+            <div className={styles["navbar__title-wrapper"]}>
+              <span className={styles["navbar__title"]}>
+                Ömer Serdar ŞERİFOĞLU - CASE
+              </span>
+            </div>
+            <div className={styles["navbar__darkmode-icon-wrapper"]}>
+              <div
+                className={styles["darkmode-icon"]}
+                onClick={() => {
+                  var newThemeValue = theme == "light" ? "dark" : "light";
+                  setTheme(newThemeValue);
 
-              localStorage.setItem("lastfm_case_templatemode", newThemeValue);
-            }}
-          >
-            <i class="fa-solid fa-moon"></i>
-          </div>
+                  localStorage.setItem(
+                    "lastfm_case_templatemode",
+                    newThemeValue
+                  );
+                }}
+              >
+                <i class="fa-solid fa-moon"></i>
+              </div>
+            </div>
+          </nav>
         </header>
         <main>{children}</main>
       </div>
