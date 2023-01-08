@@ -7,6 +7,7 @@
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: 1px solid var(--secondary-color);
+    border-radius: 4px;
 
     display: grid;
     grid-template-columns: 2fr 3fr 2fr;
@@ -100,6 +101,11 @@
 }
 
 @media screen and (max-width: 600px) {
+    .card{
+        height: 10rem;
+        grid-template-columns: 3fr 5fr 4fr;
+        margin: 0.3rem 0;
+    }
     .card__image-content{
         max-width: 5em;
     }
@@ -113,10 +119,10 @@
     }
 
     .card__listenerscount{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
     
     .card__playcount{
-        font-size: 0.8rem;
+        font-size: 0.7rem;
     }
 }
