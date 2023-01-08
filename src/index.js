@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/artist-detail/:artistId",
+    path: "/artist-detail",
     element: <ArtistDetail />,
   },
 ]);

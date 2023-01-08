@@ -6,7 +6,7 @@ import styles from "./trackList.module.css";
 const TrackList = (params) => {
   const [items, setItems] = useState([]);
 
-  const { artistId } = params;
+  const { artistId, artistName } = params;
 
   const apiKey = "007d8369d031d1645e0eba2eb1f053fb";
 
@@ -19,8 +19,11 @@ const TrackList = (params) => {
   }
 
   useEffect(() => {
-    var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&mbid=${artistId}&api_key=${apiKey}&format=json`;
-
+    if (artistId) {
+      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&mbid=${artistId}&api_key=${apiKey}&format=json`;
+    } else if (artistName) {
+      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=${artistName}&api_key=${apiKey}&format=json`;
+    }
     fetchTracks(apiUrl);
   }, [artistId]);
 

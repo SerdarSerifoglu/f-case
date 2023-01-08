@@ -8,7 +8,14 @@ const Card = ({ data }) => {
   if (type === cardTypes.artist) {
     return (
       <React.Fragment key={mbid}>
-        <a className={styles.card} href={`artist-detail/${mbid}`}>
+        <a
+          className={styles.card}
+          href={
+            mbid
+              ? `artist-detail?artistId=${mbid}`
+              : `artist-detail?artistName=${name}`
+          }
+        >
           <div className={styles["card__image-wrapper"]}>
             <img
               className={styles["card__image-content"]}
@@ -36,7 +43,14 @@ const Card = ({ data }) => {
       <React.Fragment key={mbid}>
         <div className={styles.card}>
           <div className={styles["card__image-wrapper"]}>
-            <img src={imageUrl} alt={`${name} image`} />
+            <img
+              src={
+                imageUrl
+                  ? imageUrl
+                  : "../../public/static/star-default-image.png"
+              }
+              alt={`${name} image`}
+            />
           </div>
           <div className={styles.card__info}>
             <div className={styles.card__name}>{name ?? null}</div>

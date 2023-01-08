@@ -6,7 +6,7 @@ import ListTitle from "./ListTitle";
 const AlbumList = (params) => {
   const [items, setItems] = useState([]);
 
-  const { artistId } = params;
+  const { artistId, artistName } = params;
 
   const apiKey = "007d8369d031d1645e0eba2eb1f053fb";
 
@@ -19,9 +19,13 @@ const AlbumList = (params) => {
   }
 
   useEffect(() => {
-    var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&mbid=${artistId}&api_key=${apiKey}&format=json`;
+    if (artistId) {
+      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&mbid=${artistId}&api_key=${apiKey}&format=json`;
+    } else if (artistName) {
+      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artistName}&api_key=${apiKey}&format=json`;
+    }
     fetchAlbums(apiUrl);
-  }, [artistId]);
+  }, [artistId, artistName]);
 
   return (
     <>
