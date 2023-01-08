@@ -34,15 +34,17 @@ const ArtistDetail = () => {
 
   return artistInfo.length > 0 ? (
     <>
-      <div className={styles["artist-detail-title"]}>
-        <Card
-          data={{
-            mbid: artistInfo[0].mbid,
-            name: artistInfo[0].name,
-            imageUrl: artistInfo[0].image[2]["#text"],
-            type: "title",
-          }}
-        />
+      <div className={styles["artist-detail-title-wrapper"]}>
+        <div className={styles["artist-detail-title"]}>
+          <Card
+            data={{
+              mbid: artistInfo[0].mbid,
+              name: artistInfo[0].name,
+              imageUrl: artistInfo[0].image[1]["#text"],
+              type: "title",
+            }}
+          />
+        </div>
       </div>
       <div className={styles["artist-detail"]}>
         <div className={styles["artist-detail__albums"]}>

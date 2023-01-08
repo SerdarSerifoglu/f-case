@@ -1,9 +1,13 @@
-.artist-detail-title{
+.artist-detail-title-wrapper{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.artist-detail-title{
+    width: 90%;
+}
+
 .artist-detail{
     width: 100%;
     display: flex;
