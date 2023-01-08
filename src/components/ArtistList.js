@@ -45,7 +45,7 @@ const ArtistList = () => {
   return (
     <React.Fragment>
       <div onScroll={handleScroll} className={styles["artist-list"]}>
-        <ListTitle title="Top Artist List" />
+        <ListTitle title="Top Artists" />
         {items.map((e, i) => (
           <Card
             key={i}
