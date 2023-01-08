@@ -16,9 +16,9 @@ const Layout = ({ children }) => {
         <header>
           <nav className={styles.navbar}>
             <div className={styles["navbar__title-wrapper"]}>
-              <span className={styles["navbar__title"]}>
+              <a href="/" className={styles["navbar__title"]}>
                 Ömer Serdar ŞERİFOĞLU - CASE
-              </span>
+              </a>
             </div>
             <div className={styles["navbar__darkmode-icon-wrapper"]}>
               <div
@@ -32,6 +32,7 @@ const Layout = ({ children }) => {
                     newThemeValue
                   );
                 }}
+                data-testid="darkmode-button"
               >
                 <i className="fa-solid fa-moon"></i>
               </div>
