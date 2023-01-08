@@ -92,7 +92,11 @@ const Card = ({ data }) => {
       <React.Fragment key={mbid}>
         <div className={styles.card}>
           <div className={styles["card__image-wrapper"]}>
-            <img src={imageUrl} alt={`${name} image`} />
+            <img
+              className={styles["card__image-content"]}
+              src={imageUrl}
+              alt={`${name} image`}
+            />
           </div>
           <div className={styles.card__info}>
             <div className={styles.card__name}>{name ?? null}</div>
