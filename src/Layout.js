@@ -33,7 +33,7 @@ const Layout = ({ children }) => {
                   );
                 }}
               >
-                <i class="fa-solid fa-moon"></i>
+                <i className="fa-solid fa-moon"></i>
               </div>
             </div>
           </nav>
