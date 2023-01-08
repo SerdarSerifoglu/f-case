@@ -1,0 +1,18 @@
+@import "./styles/variables.css";
+
+.darkmode-icon{
+    width: min-content;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    padding: 0.5em;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.25rem;
+}
+
+.darkmode-icon:hover{
+
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+

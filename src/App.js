@@ -1,5 +1,4 @@
 import { useState } from "react";
-import styles from "./app.module.css";
 
 import ArtistList from "./components/ArtistList";
 

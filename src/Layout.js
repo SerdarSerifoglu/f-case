@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import styles from "./app.module.css";
+import styles from "./layout.module.css";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState(
@@ -14,7 +14,8 @@ const Layout = ({ children }) => {
     <div>
       <div className={styles.main}>
         <header>
-          <button
+          <div
+            className={styles["darkmode-icon"]}
             onClick={() => {
               var newThemeValue = theme == "light" ? "dark" : "light";
               setTheme(newThemeValue);
@@ -22,8 +23,8 @@ const Layout = ({ children }) => {
               localStorage.setItem("lastfm_case_templatemode", newThemeValue);
             }}
           >
-            DARK MODE
-          </button>
+            <i class="fa-solid fa-moon"></i>
+          </div>
         </header>
         <main>{children}</main>
       </div>
