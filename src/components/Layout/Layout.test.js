@@ -6,6 +6,4 @@ test("Dark Mode Button Tests", () => {
 
   const buttonEl = screen.getByTestId("darkmode-button");
   expect(buttonEl).toBeInTheDocument();
-
-  screen.debug();
 });

@@ -13,7 +13,7 @@ const ArtistDetail = () => {
   var artistName = searchParams.get("artistName");
 
   const [artistInfo, setArtistInfo] = useState([]);
-  const apiKey = "007d8369d031d1645e0eba2eb1f053fb";
+  const apiKey = process.env.REACT_APP_LASTFM_APIKEY;
 
   function fetchArtist(apiUrl) {
     fetch(apiUrl)
@@ -25,9 +25,9 @@ const ArtistDetail = () => {
 
   useEffect(() => {
     if (artistId) {
-      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&mbid=${artistId}&api_key=${apiKey}&format=json`;
+      var apiUrl = `${process.env.REACT_APP_LASTFM_API_URL}?method=artist.getinfo&mbid=${artistId}&api_key=${apiKey}&format=json`;
     } else if (artistName) {
-      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=${artistName}&api_key=${apiKey}&format=json`;
+      var apiUrl = `${process.env.REACT_APP_LASTFM_API_URL}?method=artist.getinfo&artist=${artistName}&api_key=${apiKey}&format=json`;
     }
     fetchArtist(apiUrl);
   }, [artistId, artistName]);

@@ -10,8 +10,8 @@ const ArtistList = () => {
   const [items, setItems] = useState([]);
   const [page, setPage] = useState(1);
 
-  const apiKey = "007d8369d031d1645e0eba2eb1f053fb";
-  const apiUrl = `http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=${apiKey}&format=json&page=${page}&limit=${ITEMS_PER_PAGE}`;
+  const apiKey = process.env.REACT_APP_LASTFM_APIKEY;
+  const apiUrl = `${process.env.REACT_APP_LASTFM_API_URL}?method=chart.gettopartists&api_key=${apiKey}&format=json&page=${page}&limit=${ITEMS_PER_PAGE}`;
 
   function fetchMoreItems() {
     fetch(apiUrl)

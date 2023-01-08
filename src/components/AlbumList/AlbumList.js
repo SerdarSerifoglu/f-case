@@ -8,7 +8,7 @@ const AlbumList = (params) => {
 
   const { artistId, artistName } = params;
 
-  const apiKey = "007d8369d031d1645e0eba2eb1f053fb";
+  const apiKey = process.env.REACT_APP_LASTFM_APIKEY;
 
   function fetchAlbums(apiUrl) {
     fetch(apiUrl)
@@ -20,9 +20,9 @@ const AlbumList = (params) => {
 
   useEffect(() => {
     if (artistId) {
-      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&mbid=${artistId}&api_key=${apiKey}&format=json`;
+      var apiUrl = `${process.env.REACT_APP_LASTFM_API_URL}?method=artist.gettopalbums&mbid=${artistId}&api_key=${apiKey}&format=json`;
     } else if (artistName) {
-      var apiUrl = `http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=${artistName}&api_key=${apiKey}&format=json`;
+      var apiUrl = `${process.env.REACT_APP_LASTFM_API_URL}?method=artist.gettopalbums&artist=${artistName}&api_key=${apiKey}&format=json`;
     }
     fetchAlbums(apiUrl);
   }, [artistId, artistName]);
