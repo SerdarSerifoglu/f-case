@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
-import ListTitle from "./ListTitle";
+import Card from "../Card/Card";
+import ListTitle from "../ListTitle/ListTitle";
 import styles from "./trackList.module.css";
 
 const TrackList = (params) => {

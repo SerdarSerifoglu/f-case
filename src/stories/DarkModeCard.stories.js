@@ -1,4 +1,4 @@
-import Card from "../components/Card";
+import Card from "../components/Card/Card";
 import { cardTypes } from "../utils/statics";
 
 export default {

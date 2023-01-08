@@ -1,4 +1,4 @@
-import ListTitle from "../components/ListTitle";
+import ListTitle from "../components/ListTitle/ListTitle";
 
 export default {
   title: "Example/ListTitle",

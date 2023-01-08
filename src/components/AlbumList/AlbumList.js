@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "../Card/Card";
 import styles from "./albumList.module.css";
-import ListTitle from "./ListTitle";
+import ListTitle from "../ListTitle/ListTitle";
 
 const AlbumList = (params) => {
   const [items, setItems] = useState([]);

@@ -1,11 +1,11 @@
 import styles from "./artistDetail.module.css";
 
 import { useParams } from "react-router-dom";
-import AlbumList from "./components/AlbumList";
-import TrackList from "./components/TrackList";
+import AlbumList from "./components/AlbumList/AlbumList";
+import TrackList from "./components/TrackList/TrackList";
 import { useLocation, useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Card from "./components/Card";
+import Card from "./components/Card/Card";
 
 const ArtistDetail = () => {
   const [searchParams, setSearchParams] = useSearchParams();

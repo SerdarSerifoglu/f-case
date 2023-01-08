@@ -1,5 +1,5 @@
 import styles from "./card.module.css";
-import { cardTypes } from "../utils/statics";
+import { cardTypes } from "../../utils/statics";
 import React from "react";
 
 const Card = ({ data }) => {

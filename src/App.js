@@ -1,4 +1,4 @@
-import ArtistList from "./components/ArtistList";
+import ArtistList from "./components/ArtistList/ArtistList";
 
 function App() {
   return (
