@@ -35,7 +35,7 @@ const ArtistList = () => {
 
   const handleScroll = () => {
     if (
-      window.innerHeight + document.documentElement.scrollTop - 0.5 >=
+      window.innerHeight + document.documentElement.scrollTop >=
       document.documentElement.scrollHeight
     ) {
       setPage((prev) => prev + 1);
