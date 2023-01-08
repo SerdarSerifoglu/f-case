@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 
 const Layout = ({ children }) => {
   const [theme, setTheme] = useState(
-    localStorage.getItem("lastfm_case_templatemode")
+    localStorage.getItem("lastfm_case_templatemode") ?? "light"
   );
 
   useEffect(() => {
